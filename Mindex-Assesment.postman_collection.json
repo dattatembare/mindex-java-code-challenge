@@ -1,0 +1,356 @@
+{
+	"info": {
+		"_postman_id": "608ca6c8-df88-419f-81cd-612279cb05c3",
+		"name": "Mindex-Assesment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "reporting-structure",
+			"item": [
+				{
+					"name": "localhost:8080/employee/16a596ae-edd3-4847-99fe-c4518e82c86f/reporting-structure",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/employee/16a596ae-edd3-4847-99fe-c4518e82c86f/reporting-structure",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"employee",
+								"16a596ae-edd3-4847-99fe-c4518e82c86f",
+								"reporting-structure"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/employee/03aa1462-ffa9-4978-901b-7c001562cf6f/reporting-structure",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/employee/03aa1462-ffa9-4978-901b-7c001562cf6f/reporting-structure",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"employee",
+								"03aa1462-ffa9-4978-901b-7c001562cf6f",
+								"reporting-structure"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/employee/62c1084e-6e34-4630-93fd-9153afb65309/reporting-structure",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/employee/62c1084e-6e34-4630-93fd-9153afb65309/reporting-structure",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"employee",
+								"62c1084e-6e34-4630-93fd-9153afb65309",
+								"reporting-structure"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/employee/invalid-id/reporting-structure",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/employee/invalid-id/reporting-structure",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"employee",
+								"invalid-id",
+								"reporting-structure"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "compansation",
+			"item": [
+				{
+					"name": "localhost:8080/compensation/16a596ae-edd3-4847-99fe-c4518e82c86f",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/compensation/03aa1462-ffa9-4978-901b-7c001562cf6f",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"compensation",
+								"03aa1462-ffa9-4978-901b-7c001562cf6f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/compensation/62c1084e-6e34-4630-93fd-9153afb65309",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/compensation/62c1084e-6e34-4630-93fd-9153afb65309",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"compensation",
+								"62c1084e-6e34-4630-93fd-9153afb65309"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/compensation",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n\t{\r\n\t\t\"employee\": {\r\n\t        \"employeeId\": \"16a596ae-edd3-4847-99fe-c4518e82c86f\",\r\n\t        \"firstName\": \"John\",\r\n\t        \"lastName\": \"Lennon\",\r\n\t        \"position\": \"Development Manager\",\r\n\t        \"department\": \"Engineering\",\r\n\t        \"directReports\": null\r\n\t\t},\r\n\t\t\"salary\": 1000.50,\r\n\t\t\"effectiveDate\": \"2015/10/01\"\r\n\t}\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/compensation",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"compensation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/compensation/invalid-id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/compensation/invalid-id",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"compensation",
+								"invalid-id"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "api-health",
+			"item": [
+				{
+					"name": "localhost:8080/actuator/health",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/actuator/health",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"actuator",
+								"health"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/actuator/",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/actuator/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"actuator",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/actuator/info",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/actuator/info",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"actuator",
+								"info"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "localhost:8080/employee/16a596ae-edd3-4847-99fe-c4518e82c86f",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/employee/16a596ae-edd3-4847-99fe-c4518e82c86f",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"employee",
+						"16a596ae-edd3-4847-99fe-c4518e82c86f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/employee",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"employeeId\" : \"datta-tembare-123\",\r\n    \"firstName\" : \"Datta\",\r\n    \"lastName\" : \"Tembare\",\r\n    \"position\" : \"Development Manager\",\r\n    \"department\" : \"Engineering\",\r\n    \"directReports\" : null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/employee",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"employee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/employee/16a596ae-edd3-4847-99fe-c4518e82c86f",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"employeeId\" : \"16a596ae-edd3-4847-99fe-c4518e82c86f\",\r\n    \"firstName\" : \"John A\",\r\n    \"lastName\" : \"Lennon\",\r\n    \"position\" : \"Development Manager\",\r\n    \"department\" : \"Engineering\",\r\n    \"directReports\" : [\r\n      {\r\n        \"employeeId\" : \"b7839309-3348-463b-a7e3-5de1c168beb3\"\r\n      },\r\n      {\r\n        \"employeeId\": \"03aa1462-ffa9-4978-901b-7c001562cf6f\"\r\n      }\r\n    ]\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/employee/16a596ae-edd3-4847-99fe-c4518e82c86f",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"employee",
+						"16a596ae-edd3-4847-99fe-c4518e82c86f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/employee/invalid-id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/employee/invalid-id",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"employee",
+						"invalid-id"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
