@@ -28,4 +28,15 @@ dependencies {
 	implementation ('org.springframework.boot:spring-boot-starter-data-mongodb')
 	testImplementation ('org.springframework.boot:spring-boot-starter-test')
 	implementation (group: 'de.bwaldvogel', name: 'mongo-java-server', version: '1.25.0')
+
+	//Actuator - for health monitoring
+	implementation('org.springframework.boot:spring-boot-starter-actuator')
+	//Swagger2 - Open API for API documentation
+	implementation(group: 'io.springfox', name: 'springfox-swagger2', version: '2.9.2')
+	implementation(group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.9.2')
+	//lombok - to avoid writing boiler plate code
+	compileOnly(group: 'org.projectlombok', name: 'lombok', version: '1.18.16')
+	annotationProcessor(group: 'org.projectlombok', name: 'lombok', version: '1.18.16')
+	//jackson - for json marshalling/unmarshalling
+	implementation(group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.11.3')
 }
