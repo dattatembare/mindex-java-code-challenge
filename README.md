@@ -84,6 +84,19 @@ Compensation from the persistence layer.
 
 ## Delivery
 Please upload your results to a publicly accessible Git repo. Free ones are provided by Github and Bitbucket.
-1. Added endpoint for Task 1 - /employee/{id}/reporting-structure
-2. Added endpoint for Task 2 - create comensation - POST /comensation
-3. Added endpoint for Task 2 - get comensation - GET /comensation/{id}
+1. An endpoint added for Task 1 - /employee/{id}/reporting-structure
+2. An endpoint added for Task 2 - create compensation - POST /compensation
+3. An endpoint for Task 2 - get compensation - GET /compensation/{id}
+
+Find the REST documentation - http://localhost:8080/swagger-ui.html#/
+
+## Features Added - 
+1. Spring actuator for health monitoring
+2. Swagger2 implementation for REST documentation
+3. Jackson api for JSON marshalling/unmarshalling Ex. LocalDate in compensation.
+4. Lombok api to avoid boilerplate code
+5. Showing correct HTTP status messages on success and failure 
+6. Added Postman collection with various test scenarios
+7. Added unit tests for Controller and Service classes to get coverage above 90%
+
+
