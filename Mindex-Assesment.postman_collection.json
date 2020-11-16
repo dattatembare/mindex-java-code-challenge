@@ -9,7 +9,7 @@
 			"name": "reporting-structure",
 			"item": [
 				{
-					"name": "localhost:8080/employee/16a596ae-edd3-4847-99fe-c4518e82c86f/reporting-structure",
+					"name": "Get reporting structure for multiple reportees (Ex. John)",
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -29,7 +29,7 @@
 					"response": []
 				},
 				{
-					"name": "localhost:8080/employee/03aa1462-ffa9-4978-901b-7c001562cf6f/reporting-structure",
+					"name": "Get reporting structure for middle level employee (Ex. Ringo)",
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -49,7 +49,7 @@
 					"response": []
 				},
 				{
-					"name": "localhost:8080/employee/62c1084e-6e34-4630-93fd-9153afb65309/reporting-structure",
+					"name": "Get Reporting structure for NO reportees (Ex. Pete)",
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -69,7 +69,7 @@
 					"response": []
 				},
 				{
-					"name": "localhost:8080/employee/invalid-id/reporting-structure",
+					"name": "Get Reporting structure for Invalid employeeId",
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -95,7 +95,7 @@
 			"name": "compansation",
 			"item": [
 				{
-					"name": "localhost:8080/compensation/16a596ae-edd3-4847-99fe-c4518e82c86f",
+					"name": "Get compensation by employeeId Ex. 1",
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -114,7 +114,7 @@
 					"response": []
 				},
 				{
-					"name": "localhost:8080/compensation/62c1084e-6e34-4630-93fd-9153afb65309",
+					"name": "Get compensation by employeeId Ex. 2",
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -133,7 +133,7 @@
 					"response": []
 				},
 				{
-					"name": "localhost:8080/compensation",
+					"name": "Create compensation",
 					"request": {
 						"method": "POST",
 						"header": [
@@ -167,7 +167,7 @@
 					"response": []
 				},
 				{
-					"name": "localhost:8080/compensation/invalid-id",
+					"name": "Get compensation for invalid employeeId",
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -252,7 +252,7 @@
 			"protocolProfileBehavior": {}
 		},
 		{
-			"name": "localhost:8080/employee/16a596ae-edd3-4847-99fe-c4518e82c86f",
+			"name": "Get employees by employeeId",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -271,7 +271,7 @@
 			"response": []
 		},
 		{
-			"name": "localhost:8080/employee",
+			"name": "Create employee",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -305,7 +305,7 @@
 			"response": []
 		},
 		{
-			"name": "localhost:8080/employee/16a596ae-edd3-4847-99fe-c4518e82c86f",
+			"name": "Update employee",
 			"request": {
 				"method": "PUT",
 				"header": [],
@@ -333,7 +333,7 @@
 			"response": []
 		},
 		{
-			"name": "localhost:8080/employee/invalid-id",
+			"name": "Get emplyee for invalid employeeId",
 			"request": {
 				"method": "GET",
 				"header": [],

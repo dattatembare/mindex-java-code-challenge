@@ -84,3 +84,6 @@ Compensation from the persistence layer.
 
 ## Delivery
 Please upload your results to a publicly accessible Git repo. Free ones are provided by Github and Bitbucket.
+1. Added endpoint for Task 1 - /employee/{id}/reporting-structure
+2. Added endpoint for Task 2 - create comensation - POST /comensation
+3. Added endpoint for Task 2 - get comensation - GET /comensation/{id}

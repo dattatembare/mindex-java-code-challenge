@@ -11,10 +11,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.UUID;
+import java.util.*;
 import java.util.stream.Collectors;
 
 @Service
@@ -81,14 +78,17 @@ public class EmployeeServiceImpl implements EmployeeService {
      */
     private long calculateDirectReports(List<Employee> employees, long directReportsCount) {
         List<Employee> directReports = new ArrayList<>();
+
         for (Employee employee : employees) {
             if (employee.getDirectReports() != null) {
                 List<String> reportees = employee.getDirectReports().stream()
                         .map(Employee::getEmployeeId)
                         .collect(Collectors.toList());
-                directReports.addAll((List<Employee>) employeeRepository.findAllById(reportees));
-                employee.setDirectReports(directReports);
-                directReportsCount += directReports.size();
+                //Single call for all 'n' reportees instead of individual call for each employeeId
+                List<Employee> edr = new ArrayList<>((List<Employee>) employeeRepository.findAllById(reportees));
+                employee.setDirectReports(edr);
+                directReports.addAll(edr);
+                directReportsCount += edr.size();
             }
         }
         long finalDirectReportsCount = directReportsCount;

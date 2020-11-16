@@ -1,5 +1,6 @@
 package com.mindex.challenge.data;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -8,10 +9,13 @@ import org.springframework.data.annotation.Id;
 
 import java.util.List;
 
+import static com.fasterxml.jackson.annotation.JsonInclude.Include.NON_NULL;
+
 @Setter
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
+@JsonInclude(NON_NULL)
 public class Employee {
     @Id
     private String employeeId;

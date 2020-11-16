@@ -12,16 +12,10 @@ import java.time.LocalDate;
 @Getter
 @Setter
 @NoArgsConstructor
-//@AllArgsConstructor
+@AllArgsConstructor
 public class Compensation {
     private Employee employee;
     private Long salary;
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy/MM/dd")
     private LocalDate effectiveDate;
-
-    public Compensation(Employee employee, Long salary, LocalDate effectiveDate) {
-        this.employee = employee;
-        this.salary = salary;
-        this.effectiveDate = effectiveDate;
-    }
 }
